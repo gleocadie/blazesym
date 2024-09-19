@@ -191,7 +191,7 @@ impl Handler<Reason> for NormalizationHandler<'_, '_> {
                         file_off,
                         path,
                         &mut self.meta_lookup,
-                        || make_elf_meta(path, &entry_path.maps_file, self.build_id_reader),
+                        || make_elf_meta(path, path, self.build_id_reader),
                     ),
                 }
             }
